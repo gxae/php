@@ -1,0 +1,6 @@
+[2022-10-31 08:22:09][error] [2]getimagesize(/www/wwwroot/nasdaqhome.com/public/upload/poster/bg.jpg): failed to open stream: No such file or directory[/www/wwwroot/nasdaqhome.com/app/common.php:729]
+[2022-10-31 21:32:58][error] [2]getimagesize(/www/wwwroot/nasdaqhome.com/public/upload/poster/bg.jpg): failed to open stream: No such file or directory[/www/wwwroot/nasdaqhome.com/app/common.php:729]
+[2022-10-31 23:09:56][error] [0]SplFileInfo::getMTime(): stat failed for /www/wwwroot/nasdaqhome.com/runtime/session/sess_6613e185ae049f99a04f567b1b5c6ef9[/www/wwwroot/nasdaqhome.com/vendor/topthink/framework/src/think/session/driver/File.php:80]
+[2022-10-31 23:24:03][error] [2]getimagesize(/www/wwwroot/nasdaqhome.com/public/upload/poster/bg.jpg): failed to open stream: No such file or directory[/www/wwwroot/nasdaqhome.com/app/common.php:729]
+[2022-10-31 23:42:25][error] [2]getimagesize(/www/wwwroot/nasdaqhome.com/public/upload/poster/bg.jpg): failed to open stream: No such file or directory[/www/wwwroot/nasdaqhome.com/app/common.php:729]
+[2022-10-31 23:48:34][error] [2]getimagesize(/www/wwwroot/nasdaqhome.com/public/upload/poster/bg.jpg): failed to open stream: No such file or directory[/www/wwwroot/nasdaqhome.com/app/common.php:729]

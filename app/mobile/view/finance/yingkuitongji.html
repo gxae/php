@@ -1,0 +1,108 @@
+<!--
+ * @Author: Fox Blue
+ * @Date: 2021-07-22 14:17:12
+ * @LastEditTime: 2021-10-08 17:53:56
+ * @Description: Forward, no stop
+-->
+<div class="a-header position-re finance-bg">
+	<div class="layui-row">
+		<div class="layui-col-xs3">
+			<!--<a href="javascript:window.history.go(-1);"><i class="layui-icon layui-icon-left"></i></a>-->
+		</div>
+		<div class="layui-col-xs6 text-center all_finance_header">
+			{:lang('public_memu.finance')}
+		</div>
+	</div>
+</div>
+<div class="new-bg">
+	<!--主体-->
+	<div class="main">
+		<div class="finance-box finance-bg padding-l-r">
+			<div class="finance-nav">
+				{include file="./finance/mobile_menu"}
+			</div>
+            <form class="layui-form mt-10" action="" method="get">
+<!--                <input class="layui-input" id="test1" type="text" name="date" placeholder="click.." style="margin-bottom: 20px">-->
+<!--                <div class="layui-col-xs12 text-center">-->
+<!--                    <button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit lay-filter="yktjForm">{:lang('authset.form_btn')}</button>-->
+<!--                </div>-->
+            </form>
+            <div class="new-bg">
+                <div class="main padding-l-r">
+                    <div class="white-box">
+                        <div class="transfer-box">
+                            <div class="assets-bottom">
+                                <table class="layui-table" lay-skin="nob">
+                                    <thead>
+                                    <tr>
+                                        <th><span class="table-span-list">{:lang('public.date')}</span></th>
+                                        <th><span class="table-span-list">{:lang('public.shouru')}</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="loglist">
+                                        {volist name="data" id="vo"}
+                                            <tr>
+                                                <td>{$vo.date}</td>
+                                                <td>{$vo.val}</td>
+                                            </tr>
+                                        {/volist}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--footer-->
+{include file="./block/mobile_footmenu"}
+{include file="./block/foot_script"}
+<script>
+	layui.use(['layer', 'jquery', 'form', 'element', 'flow','laydate'], function(){
+		var layer = layui.layer
+		,$ = layui.jquery
+		,form = layui.form
+		,laydate = layui.laydate;
+		var element = layui.element;
+		var flow = layui.flow;
+
+        laydate.render({
+            elem: '#test1'
+        });
+		window.findlog = function(a,b,id){
+			$('#'+a+'_'+b).empty();
+			flow.load({
+			elem: '#'+a+'_'+b //指定列表容器
+			,colSpan:3 //列数
+			,end:'<td colspan="3" class="text-center">{:lang("finance.finance_nodata")}</td>'
+			,done: function(page, next){ //到达临界点（默认滚动触发），触发下一页
+				var lis = [];
+				$.post("{:url('finance/findlog')}",{id:id,page:page,type:3,from:4,to:4}, function(res){
+					layui.each(res.data, function(index, item){
+					lis.push('<tr><td>'+ item.create_time +'<br>'+ item.title +'</td><td>'+ item.all_account +'<br>'+ item.account_sxf +'</td><td>'+ item.type +'<br>'+ item.status +'</td></tr>');
+					}); 
+					next(lis.join(''), page < res.pages);    
+				});
+			}
+		});
+		}
+	})
+	function show_memu(_this,a){
+		$("body").find(".hidebox").hide();
+		$(".memu_"+a).fadeIn();
+		$("body").find(".layui-box").removeClass("layui-icon-down").addClass("layui-icon-right");
+		$(_this).find("i").removeClass("layui-icon-right").addClass("layui-icon-down");
+	}
+	function recharge_show(a,b,c){
+		$("."+a).fadeIn().siblings(".hidebox").hide();
+		$("."+b).fadeIn().siblings(".hidebox").hide();
+		if(b==='log'){
+			findlog(a,b,c);
+		}
+	}
+	$(".close-hide").click(function() {
+		$(".hidebox").hide()
+	});
+</script>

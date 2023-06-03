@@ -1,0 +1,2 @@
+[2022-10-30 07:37:50][error] [10501]SQLSTATE[HY000] [2002] Connection refused[/www/wwwroot/nasdaqhome.com/vendor/topthink/think-orm/src/db/PDOConnection.php:795]
+[2022-10-30 07:37:50][error] [10501]SQLSTATE[HY000] [2002] Connection refused[/www/wwwroot/nasdaqhome.com/vendor/topthink/think-orm/src/db/PDOConnection.php:795]

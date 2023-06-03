@@ -1,0 +1,101 @@
+<?php /*a:2:{s:65:"/www/wwwroot/61.4.114.53/app/admin/view/tongji/finance/index.html";i:1633958698;s:59:"/www/wwwroot/61.4.114.53/app/admin/view/layout/default.html";i:1649939362;}*/ ?>
+<!--
+ * @Author: Fox Blue
+ * @Date: 2021-05-31 13:44:29
+ * @LastEditTime: 2021-09-17 12:17:49
+ * @Description: Forward, no stop
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><?php echo sysconfig('site','site_name'); ?></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/static/admin/css/public.css?v=<?php echo htmlentities($version); ?>" media="all">
+    <script>
+        window.CONFIG = {
+            ADMIN: "<?php echo htmlentities((isset($adminModuleName) && ($adminModuleName !== '')?$adminModuleName:'admin')); ?>",
+            CONTROLLER_JS_PATH: "<?php echo htmlentities((isset($thisControllerJsPath) && ($thisControllerJsPath !== '')?$thisControllerJsPath:'')); ?>",
+            ACTION: "<?php echo htmlentities((isset($thisAction) && ($thisAction !== '')?$thisAction:'')); ?>",
+            AUTOLOAD_JS: "<?php echo htmlentities((isset($autoloadJs) && ($autoloadJs !== '')?$autoloadJs:'false')); ?>",
+            IS_SUPER_ADMIN: "<?php echo htmlentities((isset($isSuperAdmin) && ($isSuperAdmin !== '')?$isSuperAdmin:'false')); ?>",
+            // VERSION: "<?php echo htmlentities((isset($version) && ($version !== '')?$version:'1.0.0')); ?>",
+            VERSION: Date.parse(new Date())/1000,
+        };
+    </script>
+    <script src="/static/lang/zh-cn.js?v=<?php echo htmlentities($version); ?>" charset="utf-8"></script>
+    <script src="/static/plugs/layui-v2.5.6/layui.all.js?v=<?php echo htmlentities($version); ?>" charset="utf-8"></script>
+    <script src="/static/plugs/require-2.3.6/require.js?v=<?php echo htmlentities($version); ?>" charset="utf-8"></script>
+    <script src="/static/config-admin.js?v=<?php echo htmlentities($version); ?>" charset="utf-8"></script>
+</head>
+<body>
+<!--
+ * @Author: Fox Blue
+ * @Date: 2021-05-31 13:44:29
+ * @LastEditTime: 2021-10-11 21:24:59
+ * @Description: Forward, no stop
+-->
+<link rel="stylesheet" href="/static/admin/css/welcome.css?v=<?php echo time(); ?>" media="all">
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div style="margin-bottom: 20px;">
+            <fieldset class="table-search-fieldset">
+                <legend>搜索</legend>
+                <div class="layui-form layui-form-pane form-search">
+                    <div class="layui-form-item layui-inline">
+                        <label class="layui-form-label">时间范围</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="times" name="times" data-date="" data-date-type="date" data-date-range="-" class="layui-input" autocomplete="off"  placeholder="请选择时间" value="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline">
+                        <label class="layui-form-label">会员</label>
+                        <div class="layui-input-inline">
+                            <input type="text" id="username" name="username" class="layui-input" autocomplete="off"  placeholder="请输入会员" value="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline">
+                        <button class="layui-btn layui-btn-normal layui-btn-sm search-submit">确认</button>
+                        <button class="layui-btn layui-btn-primary layui-btn-sm search-reset">重置</button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-warning icon"></i>数据统计</div>
+                                <div class="layui-card-body">
+                                    <table class="layui-table">
+                                        <thead>
+                                          <tr>
+                                            <th>币种</th>
+                                            <th>充值</th>
+                                            <th>提现</th>
+                                            <th>盈损</th>
+                                          </tr> 
+                                        </thead>
+                                        <tbody id="list">
+                                          
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

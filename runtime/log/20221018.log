@@ -1,0 +1,4 @@
+[2022-10-18 09:07:08][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]
+[2022-10-18 16:43:14][error] [8]未定义数组索引: play_time[/www/wwwroot/nsdkqdsdf.com/app/mobile/controller/Order.php:309]
+[2022-10-18 16:43:15][error] [8]未定义数组索引: play_time[/www/wwwroot/nsdkqdsdf.com/app/mobile/controller/Order.php:309]
+[2022-10-18 21:26:58][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]

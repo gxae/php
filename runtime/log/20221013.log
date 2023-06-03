@@ -1,0 +1,3 @@
+[2022-10-13 03:35:38][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]
+[2022-10-13 11:58:45][error] [8]A non well formed numeric value encountered[/www/wwwroot/nsdkqdsdf.com/app/common.php:611]
+[2022-10-13 13:17:07][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]

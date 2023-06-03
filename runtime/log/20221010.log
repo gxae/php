@@ -1,0 +1,7 @@
+[2022-10-10 09:34:43][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]
+[2022-10-10 09:34:50][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]
+[2022-10-10 09:34:57][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]
+[2022-10-10 09:35:12][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]
+[2022-10-10 09:35:13][error] [8]未定义数组索引: HTTP_HOST[/www/wwwroot/nsdkqdsdf.com/app/common.php:249]
+[2022-10-10 15:23:48][error] [8]未定义数组索引: code[/www/wwwroot/nsdkqdsdf.com/app/index/controller/Seconds.php:68]
+[2022-10-10 15:23:49][error] [8]未定义数组索引: code[/www/wwwroot/nsdkqdsdf.com/app/index/controller/Seconds.php:35]
